@@ -1,0 +1,12 @@
+The following images should be added to this directory for the dashboard to work properly:
+
+1. team1-logo.png - Logo for the first team (left side)
+2. team2-logo.png - Logo for the second team (right side)
+3. field-bg.webp - Soccer/football field background image
+4. stars.webp - Stars pattern for background
+5. avatar.png - Small icon for history stats
+
+You can use placeholder images from services like https://placehold.co/ or create your own.
+For example: https://placehold.co/100x100?text=Team+1
+
+The dashboard is designed to gracefully handle missing images with fallbacks. 

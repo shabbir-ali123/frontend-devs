@@ -1,32 +1,40 @@
 'use client';
 
+import { BsFillQuestionCircleFill } from "react-icons/bs";
+import { FaChevronRight } from "react-icons/fa";
+
 const HistoryStats = () => {
   return (
-    <div className="absolute bottom-4 left-4 bg-gradient-to-r from-[#0A0D33]/80 via-[#111C5E]/80 to-[#0A0D33]/80 rounded-xl p-3 text-white max-w-xs">
-      <div className="flex items-start">
-        <div className="w-10 h-10 mr-3">
-          <img 
-            src="/images/avatar.png" 
-            alt="History stats" 
-            className="w-full h-full"
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = "https://placehold.co/100x100?text=Stats";
-            }}
-          />
-        </div>
-        <div>
-          <div className="flex items-center space-x-1 text-sm font-semibold mb-1">
-            <span>History Stats</span>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-            </svg>
+    <div className="fixed bottom-6 left-25 z-50">
+      <div className="relative w-[350px] rounded-[20px] px-5 py-4 bg-gradient-to-r from-[#07092B00] to-[#122C84] text-white shadow-md border border-[#1C2B85]/30">
+        {/* Glowing ice-like question mark on the right */}
+        <img
+          src="/images/question.png" // update path as needed
+          alt="decorative question mark"
+          className="absolute right-[-12px] top-[-23px] z-0 w-28 pointer-events-none select-none"
+        />
+
+        <div className=" z-10 relative">
+          {/* Icon bubble */}
+          <div className="flex items-center gap-2">
+            <BsFillQuestionCircleFill className="text-[#95A5F7] text-sm" />
+            <div className="flex items-center mb-1 gap-1">
+              <span className="text-sm font-semibold text-[#95A5F7]">History Stats</span>
+              <FaChevronRight className="text-xs text-[#95A5F7]" />
+            </div>
           </div>
-          <p className="text-xs text-gray-300">Find game, collect live match data and make your prediction.</p>
+
+          {/* Text content */}
+          <div>
+            
+            <p className="text-xs text-[#B2B9E1] leading-snug">
+              Find some relevant and helpful <br /> stats to guide your prediction
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default HistoryStats; 
+export default HistoryStats;

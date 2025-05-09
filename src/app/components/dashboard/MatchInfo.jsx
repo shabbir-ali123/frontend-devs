@@ -1,50 +1,50 @@
 'use client';
+import Image from 'next/image';
+import CircularProgress from './ProgressBar';
 
 const MatchInfo = () => {
   return (
-    <div className="w-full max-w-4xl bg-gradient-to-r from-[#0A0D33]/80 via-[#111C5E]/80 to-[#0A0D33]/80 rounded-xl p-1.5 mb-8">
-      <div className="relative flex justify-between items-center px-8 py-4">
-        {/* Left Team */}
-        <div className="flex flex-col items-center">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[#151F5E] to-[#06093B] p-0.5 flex items-center justify-center">
-            <div className="bg-gradient-to-b from-[#202865] to-[#06093B] rounded-full w-full h-full flex items-center justify-center">
-              <img 
-                src="/images/team1-logo.png" 
-                alt="Team 1" 
-                className="w-12 h-12"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "https://placehold.co/100x100?text=Team+1";
-                }}
-              />
-            </div>
+    <div className="w-full max-w-7xl  mx-auto my-12 px-4">
+      <div className="relative z-10 flex items-center justify-center">
+        {/* Left Team Panel */}
+        <div className="relative w-[1000px] h-[107px] flex items-center">
+          <Image
+            src="/images/Subtract.png"
+            alt="Left Panel"
+            layout="fill"
+            objectFit="contain"
+            className="z-0"
+          />
+          <div className="absolute left-30 w-[56px] h-[56px] rounded-full bg-gradient-to-b from-[#202865] to-[#06093B] flex items-center justify-center shadow-md">
+            <Image
+              src="/images/image1.png"
+              alt="Nashville SC"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
           </div>
         </div>
 
-        {/* Center Match Details */}
-        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-b from-[#0F1458]/90 to-[#070A33]/90 flex items-center justify-center">
-            <div className="w-24 h-24 rounded-full border-4 border-[#57B72A]/80 flex items-center justify-center flex-col text-white">
-              <div className="text-xl font-bold">10th - 30th</div>
-              <div className="text-xs text-center opacity-70">Minute of the Game</div>
-            </div>
-          </div>
+        {/* Game Time Ring - Use Custom Progress Component */}
+        <div className="absolute right-92 flex items-center justify-center">
+          <CircularProgress
+            percentage={90}
+            labelTop="10th - 30th"
+            labelBottom="Minute of the Game"
+          />
         </div>
 
-        {/* Right Team */}
-        <div className="flex flex-col items-center">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-b from-[#151F5E] to-[#06093B] p-0.5 flex items-center justify-center">
-            <div className="bg-gradient-to-b from-[#202865] to-[#06093B] rounded-full w-full h-full flex items-center justify-center">
-              <img 
-                src="/images/team2-logo.png" 
-                alt="Team 2" 
-                className="w-12 h-12"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "https://placehold.co/100x100?text=Team+2";
-                }}
-              />
-            </div>
+        {/* Right Team Panel */}
+        <div className="relative flex items-center justify-end">
+          <div className="absolute right-30 w-[60px] h-[60px] rounded-full flex items-center justify-center">
+            <Image
+              src="/images/image2.png"
+              alt="New England Revolution"
+              width={48}
+              height={48}
+              className="rounded-full"
+            />
           </div>
         </div>
       </div>
@@ -52,4 +52,4 @@ const MatchInfo = () => {
   );
 };
 
-export default MatchInfo; 
+export default MatchInfo;

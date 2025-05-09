@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className="bg-[#080B36] text-white shadow-md">
-      <div className="py-[26px] px-4 max-w-7xl mx-auto flex items-center justify-between">
+      <div className="py-[26px] px-4  mx-auto flex items-center justify-between">
         {/* Left: Logo */}
         <div className="flex items-center gap-2">
           <img src="/images/Union.png" alt="Logo" className="h-[30px] w-[30px]" />

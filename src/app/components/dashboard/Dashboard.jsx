@@ -22,7 +22,7 @@ const Dashboard = () => {
       
       <div className="relative z-10 flex-1 md:mt-[50px] flex flex-col items-center justify-between py-8 px-4  mx-auto w-full">
         <div className="w-full flex flex-col items-center">
-          <div className="mb-4  fixed top-26 left-25 max-md:hidden">
+          <div className="mb-4  fixed top-26 left-5 max-md:hidden">
             <button className="flex items-center gap-2 justify-start cursor-pointer  ">
            <CiCircleChevLeft className=' w-[36px] h-[36px] text-white' />
 
